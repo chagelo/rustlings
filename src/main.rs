@@ -99,7 +99,7 @@ fn main() -> Result<()> {
         println!("For instructions on how to install Rust, check the README.");
         std::process::exit(1);
     }
-
+    
     let info_file = fs::read_to_string("info.toml").unwrap_or_else(|e| {
         match e.kind() {
             io::ErrorKind::NotFound => println!(
